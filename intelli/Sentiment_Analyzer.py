@@ -38,11 +38,13 @@ class Sentiment_Analyzer:
                     self.average += scores['compound']
                     self.count += 1
                 scorePerSentence = scores[key]
-
+                
+            color = self.get_color(scorePerSentence)
             # Adds all the sentences with score in json format
             data["sentimentalScore"].append({
                 "sentence": sentence,
-                "score": scorePerSentence
+                "score": scorePerSentence,
+                "color": color
             })
 
         # Adds de total average with color 
@@ -56,26 +58,26 @@ class Sentiment_Analyzer:
         
         return data
 
-    def get_color(self, average):
+    def get_color(self, value):
         color = "#"
 
-        if (average >= -1 and average >= -0.75):
-            color = "#AB0404"
-        if (average >= -0.75 and average >= -0.50):
-            color = "#E20C0C"
-        if (average >= -0.50 and average >= -0.25):
+        if (value >= -1 and value >= -0.75):
+            color = "#B70505"
+        if (value >= -0.75 and value >= -0.50):
+            color = "#E61010"
+        if (value >= -0.50 and value >= -0.25):
             color = "#EA5555"
-        if (average >= -0.25 and average >=  -0.10):
+        if (value >= -0.25 and value >= -0.10):
             color = "#E89494"
-        if (average >= -0.10 and average >=  0.10):
-            color = "#B9B9B9"
-        if (average >= 0.10 and average >=  0.25):
-            color = "#98E894"
-        if (average >= 0.25 and average >=  0.50):
-            color = "#55EA55"
-        if (average >= 0.50 and average >=  0.75):
-            color = "#06CD0F"
-        if (average >= 0.75 and average >=  1):
-            color = "#009006"
+        if (value >= -0.10 and value <= 0.10):
+            color = "#C6C6C6"
+        if (value >= 0.10 and value <= 0.25):
+            color = "#8FE494"
+        if (value >= 0.25 and value <= 0.50):
+            color = "#6BDE6B"
+        if (value >= 0.50 and value <= 0.75):
+            color = "#10E62A"
+        if (value >= 0.75 and value <= 1):
+            color = "#05B710"
         
         return color

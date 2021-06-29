@@ -21,7 +21,6 @@ def process_survey():
         'thirdQuestion': request.form['thirdQuestion']
     })
 
-    #return data
     return render_template('score.html', data = data)
 
 if __name__ == '__main__':
