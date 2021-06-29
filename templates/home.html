@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/app.css') }}">
+    {% include "layouts/links.html" %}
     <title>Inicio</title>
 </head>
 <body>
+    {% include "layouts/animation.html" %}
     <div class="container">
         <div class="child">
-            <h1>Survey of RF Project</h1>
+            <div class="h1Div">
+                <h1>Survey of RF Project</h1>
+            </div>
             <form action="/" method="post">
                 <label for="firstQuestion">Your experience at the register</label>
                 <select id="firstQuestion" name="firstQuestion" required>
@@ -22,7 +21,7 @@
                     <option value="4">Dissatisfied</option>
                     <option value="5">Very dissatisfied</option>
                 </select>
-    
+
                 <label for="secondQuestion">The products offered in the store</label>
                 <select id="secondQuestion" name="secondQuestion" required>
                     <option value="" selected>-- Select --</option>
@@ -32,7 +31,7 @@
                     <option value="4">Dissatisfied</option>
                     <option value="5">Very dissatisfied</option>
                 </select>
-    
+
                 <label for="thirdQuestion">The price of the products</label>
                 <select id="thirdQuestion" name="thirdQuestion" required>
                     <option value="" selected>-- Select --</option>
@@ -42,10 +41,10 @@
                     <option value="4">Dissatisfied</option>
                     <option value="5">Very dissatisfied</option>
                 </select>
-    
+
                 <label for="thirdQuestion">Tell us how was your experience</label>
                 <input type="text" name="openEndedQuestion" required />
-    
+
                 <input type="submit" value="Submit">
             </form>
         </div>
