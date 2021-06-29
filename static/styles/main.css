@@ -9,6 +9,27 @@ body {
     background-color: #c6eeee;
 }
 
+/* Center div */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.child {
+    color: white;
+    position: absolute; 
+    border-radius: 10px;
+    background-color: #525252;
+    padding: 1rem;
+    width: 60%;
+}
+
+.h1Div {
+    margin-bottom: 1rem;
+}
+/* Center div (END) */
+
 /* Inputs, outputs */
 input[type=text], select {
     width: 100%;
@@ -36,26 +57,6 @@ input[type=submit]:hover {
 }
 /* Inputs, outputs (END) */
 
-/* Center div */
-.container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.child {
-    color: white;
-    border-radius: 10px;
-    background-color: #525252;
-    padding: 1rem;
-    width: 60%;
-}
-
-.h1Div {
-    margin-bottom: 1rem;
-}
-/* Center div (END) */
-
 /* Table styles */
 #scoreTable {
     border-collapse: collapse;
@@ -75,7 +76,7 @@ input[type=submit]:hover {
 }
 
 #scoreTable tr:hover { 
-    background-color: #ddd; 
+    background-color: rgb(143, 143, 143); 
 }
 
 #scoreTable th {

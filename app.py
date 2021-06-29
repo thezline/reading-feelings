@@ -7,12 +7,12 @@ load_dotenv()
 PORT = os.getenv("PORT")
 app = Flask(__name__, template_folder='templates')
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
     return render_template('home.html')
 
-@app.route('/', methods=['POST'])
-def home_post():
+@app.route('/processSurvey', methods=['POST'])
+def process_survey():
     sentimentAnalizer = Sentiment_Analyzer(request.form['openEndedQuestion'])
     data = sentimentAnalizer.get_sentiment()
     data['normalQuestions'].append({
@@ -21,7 +21,6 @@ def home_post():
         'thirdQuestion': request.form['thirdQuestion']
     })
 
-    #print(data['sentimentalScore'])
     return render_template('score.html', data = data)
 
 if __name__ == '__main__':
