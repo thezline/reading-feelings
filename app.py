@@ -1,5 +1,10 @@
 from flask import Flask, request, render_template
 from intelli.Sentiment_Analyzer import Sentiment_Analyzer
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+PORT = os.getenv("PORT")
 app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
@@ -20,4 +25,4 @@ def home_post():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(port=5050)
+    app.run(port=PORT)

@@ -14,7 +14,6 @@ class Sentiment_Analyzer:
         self.text = txt
         self.average = 0.0
         self.count = 0
-
     
     def get_sentiment(self):
         """ 
