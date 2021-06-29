@@ -10,6 +10,10 @@
         <div class="child">
             <div class="h1Div">
                 <h1>Open-ended question result</h1>
+                <h3><a href="/" class="links">Go back</a></h3>
+            </div>
+            <div>
+                <p>The range is between -1 to 1, where -1 is very negative and 1 is very positive.</p>
             </div>
             <table id="scoreTable">
                 <tr>
@@ -22,13 +26,12 @@
                         <td>{{ elements.score }}</td>
                     </tr>
                 {% endfor %}
-                {% for elements in data['totalAverage'] %}
-                    <tr>
-                        <td></td>
-                        <td>{{ elements.average }}</td>
-                    </tr>
-                {% endfor %}
             </table>
+            <div>
+                {% for elements in data['totalAverage'] %}
+                    <h3>Total average: </h3><span>{{ elements.average }}</span>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>

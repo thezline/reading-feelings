@@ -55,6 +55,12 @@ input[type=submit]:hover {
     background-color: #06AD89;
     margin-bottom: 1rem;
 }
+
+.links {
+    color: rgb(18, 224, 163);
+    text-decoration: none;
+}
+
 /* Inputs, outputs (END) */
 
 /* Table styles */
