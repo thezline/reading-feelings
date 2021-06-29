@@ -28,7 +28,8 @@ class Sentiment_Analyzer:
         data = {}
         data['sentimentalScore'] = []
         data['normalQuestions'] = []
-
+        data["totalAverage"] = []
+        
         for sentence in sentences:
             scores = analizer.polarity_scores(sentence)
             scorePerSentence = 0
@@ -45,7 +46,7 @@ class Sentiment_Analyzer:
             })
 
         # Adds de total average
-        data["sentimentalScore"].append({
+        data["totalAverage"].append({
             "average": float("{0:.3f}".format(self.average / self.count)),
         })
         

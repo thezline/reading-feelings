@@ -9,17 +9,23 @@
     <div class="container">
         <div class="child">
             <div class="h1Div">
-                <h1>Survey of RF Project</h1>
+                <h1>Open-ended question result</h1>
             </div>
             <table id="scoreTable">
                 <tr>
-                    <th>Sentence</th>
-                    <th>Score</th>
+                    <th>Sentences</th>
+                    <th>Scores</th>
                 </tr>
                 {% for elements in data['sentimentalScore'] %}
                     <tr>
                         <td>{{ elements.sentence }}</td>
                         <td>{{ elements.score }}</td>
+                    </tr>
+                {% endfor %}
+                {% for elements in data['totalAverage'] %}
+                    <tr>
+                        <td></td>
+                        <td>{{ elements.average }}</td>
                     </tr>
                 {% endfor %}
             </table>
