@@ -29,7 +29,10 @@
             </table>
             <div>
                 {% for elements in data['totalAverage'] %}
-                    <h3>Total average: </h3><span>{{ elements.average }}</span>
+                    <h3>Total average: </h3>
+                    <b style="{{ "color: " ~ elements.color }}">
+                        {{ elements.average }}
+                    </b>
                 {% endfor %}
             </div>
         </div>
