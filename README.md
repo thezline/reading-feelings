@@ -30,3 +30,6 @@ python-dotenv | 0.18.0
 In the demo directory (intelli/demo), execute the following command:
 
 `$ python3 Sentiment_Analyzer_Demo.py`
+
+## Demo preview
+![preview](img/demo_preview.png)
