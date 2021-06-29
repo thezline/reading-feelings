@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from intelli.index import Sentiment_Analyzer
 app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
@@ -7,16 +8,16 @@ def home():
 
 @app.route('/', methods=['POST'])
 def home_post():
-    firstQuestion = request.form['firstQuestion']
-    secondQuestion = request.form['secondQuestion']
-    thirdQuestion = request.form['thirdQuestion']
-    thirdQuestion = request.form['thirdQuestion']
-    openEndedQuestion = request.form['openEndedQuestion']
+    sentimentAnalizer = Sentiment_Analyzer(request.form['openEndedQuestion'])
+    data = sentimentAnalizer.get_sentiment()
+    data['normalQuestions'].append({
+        'firstQuestion': request.form['firstQuestion'],
+        'secondQuestion': request.form['secondQuestion'],
+        'thirdQuestion': request.form['thirdQuestion']
+    })
 
-    return openEndedQuestion
+    return data
 
 if __name__ == '__main__':
     app.debug = True
-    app.run()
-
-app.run(port=5000)
+    app.run(port=5050)
