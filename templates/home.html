@@ -5,27 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/app.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/app.css') }}">
     <title>Inicio</title>
 </head>
 <body>
-    <div>
-        <form action="/" method="post">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
-
-            <input type="submit" value="Submit">
-        </form>
+    <div class="container">
+        <div class="child">
+            <h1>Survey of RF Project</h1>
+            <form action="/" method="post">
+                <label for="firstQuestion">Your experience at the register</label>
+                <select id="firstQuestion" name="firstQuestion" required>
+                    <option value="" selected>-- Select --</option>
+                    <option value="1">Very satisfied</option>
+                    <option value="2">Satisfied</option>
+                    <option value="3">Neither satisfied or dissatisfied</option>
+                    <option value="4">Dissatisfied</option>
+                    <option value="5">Very dissatisfied</option>
+                </select>
+    
+                <label for="secondQuestion">The products offered in the store</label>
+                <select id="secondQuestion" name="secondQuestion" required>
+                    <option value="" selected>-- Select --</option>
+                    <option value="1">Very satisfied</option>
+                    <option value="2">Satisfied</option>
+                    <option value="3">Neither satisfied or dissatisfied</option>
+                    <option value="4">Dissatisfied</option>
+                    <option value="5">Very dissatisfied</option>
+                </select>
+    
+                <label for="thirdQuestion">The price of the products</label>
+                <select id="thirdQuestion" name="thirdQuestion" required>
+                    <option value="" selected>-- Select --</option>
+                    <option value="1">Very satisfied</option>
+                    <option value="2">Satisfied</option>
+                    <option value="3">Neither satisfied or dissatisfied</option>
+                    <option value="4">Dissatisfied</option>
+                    <option value="5">Very dissatisfied</option>
+                </select>
+    
+                <label for="thirdQuestion">Tell us how was your experience</label>
+                <input type="text" name="openEndedQuestion" required />
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
 </body>
 </html>

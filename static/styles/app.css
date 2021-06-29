@@ -10,7 +10,7 @@ input[type=text], select {
   
 input[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #05A280;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -20,11 +20,18 @@ input[type=submit] {
 }
   
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #06AD89;
 }
   
-div {
+.child {
+    color: white;
+    width: 60%;
     border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: #686868;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
