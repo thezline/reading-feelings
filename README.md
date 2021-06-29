@@ -17,7 +17,7 @@ Note: The first time you execute the app install vader_lexicon and punkt. You ca
 #nltk.download('punkt')
 ```
 
-## Technologies
+## Technologies used
                     
 Name  | Version
 ------------- | -------------
@@ -25,7 +25,7 @@ Python  | 3.9.6
 Flask  | 2.0.1
 Nltk library  | 3.6.2
 
-## Testing only the AI
-In the demo directory, execute the following command:
+## Testing only the AI module
+In the demo directory (intelli/demo), execute the following command:
 
 `$ python3 Sentiment_Analyzer_Demo.py`
