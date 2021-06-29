@@ -31,12 +31,12 @@ class Sentiment_Analyzer:
 
         for sentence in sentences:
             scores = analizer.polarity_scores(sentence)
-            scorePerSentence = {}
+            scorePerSentence = 0
             for key in scores:
                 if scores[key] == scores['compound']:
                     self.average += scores['compound']
                     self.count += 1
-                scorePerSentence = { key: scores[key] }
+                scorePerSentence = scores[key]
 
             # Adds all the sentences with score in json format
             data["sentimentalScore"].append({
