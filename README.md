@@ -11,9 +11,9 @@ Python  | 3.9.6
 Flask  | 2.0.1
 Nltk library  | 3.6.2
 
-### Test only the AI
+### Testing only the AI
 In the root dir, go to:
->cd /intelli/demo/
+`$ cd /intelli/demo/`
 
 Execute:
->python3 index.py
+`$ python3 index.py`
