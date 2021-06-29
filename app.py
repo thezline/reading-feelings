@@ -21,7 +21,8 @@ def home_post():
         'thirdQuestion': request.form['thirdQuestion']
     })
 
-    return data
+    #print(data['sentimentalScore'])
+    return render_template('score.html', data = data)
 
 if __name__ == '__main__':
     app.debug = True

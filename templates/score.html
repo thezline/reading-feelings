@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "layouts/links.html" %}
+    <title>Inicio</title>
+</head>
+<body>
+    {% include "layouts/animation.html" %}
+    <div class="container">
+        <div class="child">
+            <div class="h1Div">
+                <h1>Survey of RF Project</h1>
+            </div>
+            <table id="scoreTable">
+                <tr>
+                    <th>Sentence</th>
+                    <th>Score</th>
+                </tr>
+                {% for elements in data['sentimentalScore'] %}
+                    <tr>
+                        <td>{{ elements.sentence }}</td>
+                        <td>{{ elements.score }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>
