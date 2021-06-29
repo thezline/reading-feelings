@@ -10,6 +10,13 @@ To start the flask application, it just needs to execute the app.py in the root 
 
 > App running in the port 5050
 
+Note: The first time you execute the app install vader_lexicon and punkt. You can do it directly in the code (Sentiment_Analyzer.py/Sentiment_Analyzer_Demo.py)
+
+```python
+#nltk.download('vader_lexicon')
+#nltk.download('punkt')
+```
+
 ## Technologies
                     
 Name  | Version
@@ -19,10 +26,6 @@ Flask  | 2.0.1
 Nltk library  | 3.6.2
 
 ## Testing only the AI
-In the root dir, go to:
+In the demo directory, execute the following command:
 
-`$ cd /intelli/demo/`
-
-And then execute:
-
-`$ python3 index.py`
+`$ python3 Sentiment_Analyzer_Demo.py`

@@ -1,5 +1,6 @@
 import nltk
 import json
+#Lines to uncomment
 #nltk.download('vader_lexicon')
 #nltk.download('punkt')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer

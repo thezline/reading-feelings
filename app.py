@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from intelli.index import Sentiment_Analyzer
+from intelli.Sentiment_Analyzer import Sentiment_Analyzer
 app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
